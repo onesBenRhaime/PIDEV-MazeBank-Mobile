@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="AddCarteBancaire" cloudDestinationProperty="AddCarteBancaire" layout="BoxLayout" boxLayoutAxis="Y" >
+  <component type="Label" name="email" cloudDestinationProperty="email" text="E-mail" >
+  </component>
+  <component type="TextField" name="email" cloudBoundProperty="text" cloudDestinationProperty="email" text="TextField" >
+  </component>
+  <component type="Label" name="identifier" cloudDestinationProperty="identifier" text="Identifier" >
+  </component>
+  <component type="TextField" name="identifier" cloudBoundProperty="text" cloudDestinationProperty="identifier" text="TextField1" >
+  </component>
+  <component type="Label" name="description" cloudDestinationProperty="description" text="Description" >
+  </component>
+  <component type="TextField" name="description" cloudBoundProperty="text" cloudDestinationProperty="description" text="TextField2" >
+  </component>
+  <component type="Label" name="CIN 1" cloudDestinationProperty="CIN 1" text="CIN Side 1" >
+  </component>
+  <component type="ImageViewer" name="cinS1" cloudDestinationProperty="cinS1" >
+  </component>
+  <component type="Label" name="CIN 2" cloudDestinationProperty="CIN 2" text="CIN Side 2" >
+  </component>
+  <component type="ImageViewer" name="cinS2" cloudDestinationProperty="cinS2" >
+  </component>
+</component>
