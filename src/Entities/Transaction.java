@@ -25,6 +25,21 @@ public class Transaction {
         this.compte = compte;
     }
 
+    public Transaction() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Transaction(String agenceName, String statue, String requestTo, String requestFrom, String montant, String typeTransaction, String compte) {
+        this.agenceName = agenceName;
+        this.statue = statue;
+        this.requestTo = requestTo;
+        this.requestFrom = requestFrom;
+        this.montant = montant;
+        this.typeTransaction = typeTransaction;
+        this.compte = compte;
+    }
+
+    
     public int getId() {
         return id;
     }

@@ -51,7 +51,7 @@ public class MyApplication {
             current.show();
             return;
         }
-         new HomeCarteBancaire(theme).show();
+         new HomeTransaction(theme).show();
     }
 
     public void stop() {
