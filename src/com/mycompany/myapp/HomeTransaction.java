@@ -16,7 +16,7 @@ private Resources theme;
     public HomeTransaction(Resources res) {
                 current=this; //Back 
                 
-        add(new Label("Transaction Bancaire"));
+        add(new Label("Transaction"));
         setTitle("Transaction");
         setLayout(BoxLayout.y());   
         Button BUTlistTransaction= new Button("Lister les transactions");   

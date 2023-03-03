@@ -109,7 +109,6 @@ public class AddTransaction extends Form{
         mesListes.addActionListener((e) -> {
                InfiniteProgress ip = new InfiniteProgress();
         final Dialog ipDlg = ip.showInifiniteBlocking();
-        
             ListeTransaction a = new ListeTransaction(res,current);
             a.show();
             refreshTheme();
@@ -137,14 +136,7 @@ public class AddTransaction extends Form{
         
         //
         
-            TextField agenceName = new TextField("", " nom d'agence !!");
-            agenceName.setUIID("TextFieldBlack");
-            addStringValue("agenceName",agenceName);
-
-            TextField statue = new TextField("", " statue!!");
-            statue.setUIID("TextFieldBlack");
-            addStringValue("statue",statue);
-
+            
             TextField requestTo = new TextField("", "request To!");
             requestTo.setUIID("TextFieldBlack");
             addStringValue("requestTo",requestTo);
@@ -162,10 +154,7 @@ public class AddTransaction extends Form{
             typeTransaction.setUIID("TextFieldBlack");
             addStringValue("typeTransaction",typeTransaction);
             
-            TextField compte = new TextField("", "compte!");
-            compte.setUIID("TextFieldBlack");
-            addStringValue("compte",compte);
-            
+          
             
             Button btnAjouter = new Button("Ajouter");
             addStringValue("", btnAjouter);
@@ -175,12 +164,11 @@ public class AddTransaction extends Form{
 
                 try {
 
-                    if(agenceName.getText().equals("") || statue.getText().equals("")
-                                                       || requestTo.getText().equals("")
+                    if( requestTo.getText().equals("")
                                                        || requestFrom.getText().equals("")
                                                        || montant.getText().equals("")
-                                                       || typeTransaction.getText().equals("")
-                                                       || compte.getText().equals("")) 
+                                                       || typeTransaction.getText().equals(""))
+                                                       
                     {
                         Dialog.show("Veuillez vérifier les données","","Annuler", "OK");
                     }
@@ -193,13 +181,12 @@ public class AddTransaction extends Form{
                     
                     //njibo iduser men session (current user)
                       Transaction r = new Transaction(
-                                                      String.valueOf(agenceName.getText()).toString(),
-                                                      String.valueOf(statue.getText()).toString(), 
+                                                      
+                                                      
                                                       String.valueOf(requestTo.getText()).toString(),
                                                       String.valueOf(requestFrom.getText()).toString(),
                                                       String.valueOf(montant.getText()).toString(),
-                                                      String.valueOf(typeTransaction.getText()).toString(),
-                                                      String.valueOf(compte.getText()).toString()
+                                                      String.valueOf(typeTransaction.getText()).toString()
                                                      );
                     
                     
@@ -239,25 +226,25 @@ public class AddTransaction extends Form{
     }
 
     private void addTab(Tabs swipe, Label spacer , Image image, String string, String text, Resources res) {
-      //  int size = Math.min(Display.getInstance().getDisplayWidth(), Display.getInstance().getDisplayHeight());
-        
-       /* if(image.getHeight() < size) {
-            image = image.scaledHeight(size);
-        }
-        
-        
-        
-        if(image.getHeight() > Display.getInstance().getDisplayHeight() / 2 ) {
-            image = image.scaledHeight(Display.getInstance().getDisplayHeight() / 2);
-        }
-        
-        ScaleImageLabel imageScale = new ScaleImageLabel(image);
-        imageScale.setUIID("Container");
-        imageScale.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FILL);
-        
-        Label overLay = new Label("","ImageOverlay");*/
-        
-        
+//        int size = Math.min(Display.getInstance().getDisplayWidth(), Display.getInstance().getDisplayHeight());
+//          
+//        if(image.getHeight() < size) {
+//            image = image.scaledHeight(size);
+//        }
+//        
+//        
+//        
+//        if(image.getHeight() > Display.getInstance().getDisplayHeight() / 2 ) {
+//            image = image.scaledHeight(Display.getInstance().getDisplayHeight() / 2);
+//        }
+//        
+//        ScaleImageLabel imageScale = new ScaleImageLabel(image);
+//        imageScale.setUIID("Container");
+//        imageScale.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FILL);
+//        
+//        Label overLay = new Label("","ImageOverlay");
+//        
+//        
         Container page1 = 
                 LayeredLayout.encloseIn(
                 

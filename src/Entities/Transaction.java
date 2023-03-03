@@ -12,31 +12,25 @@ package Entities;
 public class Transaction {
     
        private int id;
-       private String agenceName,statue,requestTo ,requestFrom,montant,typeTransaction,compte;
+       private String tue,requestTo ,requestFrom,montant,typeTransaction;
 
-    public Transaction(int id, String agenceName, String statue, String requestTo, String requestFrom, String montant, String typeTransaction, String compte) {
+    public Transaction(int id, String requestTo, String requestFrom, String montant, String typeTransaction) {
         this.id = id;
-        this.agenceName = agenceName;
-        this.statue = statue;
+        
         this.requestTo = requestTo;
         this.requestFrom = requestFrom;
         this.montant = montant;
         this.typeTransaction = typeTransaction;
-        this.compte = compte;
     }
 
-    public Transaction() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public Transaction() {  }
 
-    public Transaction(String agenceName, String statue, String requestTo, String requestFrom, String montant, String typeTransaction, String compte) {
-        this.agenceName = agenceName;
-        this.statue = statue;
+    public Transaction( String requestTo, String requestFrom, String montant, String typeTransaction) {
+      
         this.requestTo = requestTo;
         this.requestFrom = requestFrom;
         this.montant = montant;
         this.typeTransaction = typeTransaction;
-        this.compte = compte;
     }
 
     
@@ -46,22 +40,6 @@ public class Transaction {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getAgenceName() {
-        return agenceName;
-    }
-
-    public void setAgenceName(String agenceName) {
-        this.agenceName = agenceName;
-    }
-
-    public String getStatue() {
-        return statue;
-    }
-
-    public void setStatue(String statue) {
-        this.statue = statue;
     }
 
     public String getRequestTo() {
@@ -96,17 +74,11 @@ public class Transaction {
         this.typeTransaction = typeTransaction;
     }
 
-    public String getCompte() {
-        return compte;
-    }
-
-    public void setCompte(String compte) {
-        this.compte = compte;
-    }
+    
 
     @Override
     public String toString() {
-        return "Transaction{" + "id=" + id + ", agenceName=" + agenceName + ", statue=" + statue + ", requestTo=" + requestTo + ", requestFrom=" + requestFrom + ", montant=" + montant + ", typeTransaction=" + typeTransaction + ", compte=" + compte + '}';
+        return "Transaction{" + "id=" + id + " requestTo=" + requestTo + ", requestFrom=" + requestFrom + ", montant=" + montant + ", typeTransaction=" + typeTransaction + '}';
     }
 
     
